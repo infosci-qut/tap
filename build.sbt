@@ -50,6 +50,7 @@ lazy val vScalaTags = "0.6.8"
 lazy val vXmlBind = "2.3.0"
 lazy val vUpickle = "0.6.6"
 
+lazy val sparkVersion = "2.4.4"
 //Java library versions
 lazy val openNlpVersion = "1.9.1"
 lazy val langToolVersion = "4.4"
@@ -102,6 +103,10 @@ val analyticsDependencies = Seq(
   "org.apache.opennlp" % "opennlp-tools" % openNlpVersion,
   "org.languagetool" % "language-en" % langToolVersion,
   "com.typesafe.play" %% "play-json" % playJsonVersion,
+  "org.apache.spark" %% "spark-core" % sparkVersion,
+  "org.apache.spark" %% "spark-sql" % sparkVersion,
+  "org.apache.spark" %% "spark-mllib" % sparkVersion,
+  "org.apache.commons" % "commons-lang3" % "3.8"
   //"org.platanios" % "tensorflow" % tensorFlowV,  // http://platanios.org/tensorflow_scala/installation.html
   //"org.platanios" % "tensorflow" % tensorFlowV classifier "darwin-cpu-x86_64" //"linux-cpu-x86_64"
 )
